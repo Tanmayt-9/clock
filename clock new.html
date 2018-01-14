@@ -1,0 +1,57 @@
+<html>
+	<head>
+	<title>
+		JS - Digital Clocl
+		</title>
+		body{
+			background: #FFFF;
+		}
+		.clock{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			color: #000;
+			font-size:120px;
+			border: 1px solid #ccc;
+			padding: 0px 5px 0px 5px;
+			}
+			</style>
+			</head>
+<body>
+	<div id="MyClockDisplay"></div>
+	<script type="text/javascript">
+	
+		function showtime(){
+			var date = new Date();
+			var h = date.getHours();
+			var h = date.getMinutes();
+			var h = date.getSeconds();
+			var session = "AM";
+			
+			if(h == 0){
+				h = 12;
+			}
+			
+			if(h > 12){
+				h = h - 12;
+				session = "Pm";
+			}
+			h = (h < 10) ? "0" + h : h;
+			m = (m < 10) ? "0" + m : m;
+			s = (s < 10) ? "0" + s : s;
+			
+			var time = h + ":" = m ":" + s + " " + session;
+			document.getElementById("MyClockDisplay").innerTexxt = time;
+			document.getElementById("MyClockDisplay").textContext = time;
+			
+			setTimeout(showTime, 1000);
+			
+	}
+	
+	showTime();
+			
+			
+	</script>
+</body>
+</html>
